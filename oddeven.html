@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODDEVEN</title>
+    <style>
+        #num {
+            margin-top: 50px;
+            height: 40px;
+            width: 200px;
+            background-color: rgba(128, 128, 128, 0.137);
+            border: 1px solid gray;
+            text-align: center;
+            margin-left: 30px;
+        }
+        
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+            border: none;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        
+        .maindivision {
+            margin: auto;
+            height: 200px;
+            width: 500px;
+            border: 2px solid gray;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        p {
+            float: left;
+            margin: 0;
+            margin-top: 30px;
+            margin-left: 100px;
+            font-size: 25px;
+            color: darkgoldenrod;
+        }
+        
+        h1 {
+            height: 40px;
+            width: 200px;
+            border: 1px solid gray;
+            margin-left: 10px;
+            float: left;
+            font-size: 20px;
+            vertical-align: middle;
+            line-height: 40px;
+            color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindivision">
+        <Input type="number" id="num"></Input>
+        <button type="button" onclick="btnclick()"> CLICK</button>
+        <div>
+            <p>OUTPUT</p>
+            <h1 id="output"> </h1>
+        </div>
+
+    </div>
+
+    <script>
+        function btnclick() {
+
+            let no = parseInt(document.getElementById("num").value);
+            let result = document.getElementById("output");
+            console.log("result");
+
+            if (no % 2 == 0) {
+                result.innerText = "This is Even number";
+                console.log("even");
+
+
+            } else {
+                result.innerText = "This is odd number";
+                console.log("odd");
+
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
